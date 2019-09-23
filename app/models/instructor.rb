@@ -18,7 +18,7 @@ class Instructor
         test.status = "passed"
         test
       else 
-        BoardingTest.new(student)
+        BoardingTest.new(student, test_name, )
       end 
     end 
   end 
