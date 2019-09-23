@@ -26,7 +26,7 @@ class Instructor
   def fail_student(student, test_name)
     BoatingTest.all.each do |test|
       if test.student == student && test.test_name == test_name
-        test.status = "failed"
+        test.test_status = "failed"
         test
       else 
         return BoardingTest.new(student, test_name, "failed", self)
