@@ -16,8 +16,9 @@ class Instructor
     BoardingTest.all.each do |test|
       if test.student == student && test.test_name == test_name
         test.status = "passed"
+        test
       else 
-        
+        BoardingTest.new(student)
       end 
     end 
   end 
