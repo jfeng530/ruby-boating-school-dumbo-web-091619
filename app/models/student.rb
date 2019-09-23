@@ -12,8 +12,8 @@ class Student
     @@all
   end
   
-  def add_boating_test(student, boat_test, test_status, instructor)
-    BoatingTest.new
+  def add_boating_test(student, test_name, test_status, instructor)
+    BoatingTest.new(student, test_name, test_status, instructor)
   end 
   
   def self.find_student(first_name)
