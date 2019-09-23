@@ -8,6 +8,10 @@ class Student
     @@all << self
   end 
   
+  def self.all
+    @@all
+  end
+  
   def add_boating_test(student, boat_test, test_status, instructor)
     BoatingTest.new
   end 
