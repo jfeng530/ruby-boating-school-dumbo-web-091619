@@ -13,5 +13,8 @@ class Instructor
   end
   
   def pass_student(student, test_name)
-  
+    BoardingTest.all.each do |test|
+      if test.
+    end 
+  end 
 end
