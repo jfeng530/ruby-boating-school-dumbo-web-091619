@@ -13,7 +13,7 @@ class Instructor
   end
   
   def pass_student(student, test_name)
-    BoardingTest.all.each do |test|
+    BoatingTest.all.each do |test|
       if test.student == student && test.test_name == test_name
         test.status = "passed"
         test
@@ -24,7 +24,7 @@ class Instructor
   end
   
   def fail_student(student, test_name)
-    BoardingTest.all.each do |test|
+    BoatingTest.all.each do |test|
       if test.student == student && test.test_name == test_name
         test.status = "failed"
         test
