@@ -18,8 +18,20 @@ class Instructor
         test.status = "passed"
         test
       else 
-        BoardingTest.new(student, test_name, "passed")
+        return BoardingTest.new(student, test_name, "passed", self)
+      end 
+    end 
+  end
+  
+  def fail_student(student, test_name)
+    BoardingTest.all.each do |test|
+      if test.student == student && test.test_name == test_name
+        test.status = "failed"
+        test
+      else 
+        return BoardingTest.new(student, test_name, "failed", self)
       end 
     end 
   end 
+  
 end
