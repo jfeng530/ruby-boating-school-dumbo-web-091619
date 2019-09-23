@@ -14,7 +14,11 @@ class Instructor
   
   def pass_student(student, test_name)
     BoardingTest.all.each do |test|
-      if test.
+      if test.student == student && test.test_name == test_name
+        test.status = "passed"
+      else 
+        
+      end 
     end 
   end 
 end
