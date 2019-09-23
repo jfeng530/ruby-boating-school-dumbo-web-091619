@@ -15,7 +15,7 @@ class Instructor
   def pass_student(student, test_name)
     BoatingTest.all.each do |test|
       if test.student == student && test.test_name == test_name
-        test.status = "passed"
+        test.test_status = "passed"
         test
       else 
         return BoardingTest.new(student, test_name, "passed", self)
